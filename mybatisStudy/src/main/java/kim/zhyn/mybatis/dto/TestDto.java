@@ -1,11 +1,11 @@
 package kim.zhyn.mybatis.dto;
 
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+import org.springframework.stereotype.Component;
 
-@Getter
-@Setter
+@Data
+@Component
 public class TestDto {
 
     int idx;
