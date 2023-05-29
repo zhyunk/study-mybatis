@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="kim.zhyn.mybatis.mapper.TestXmlMapper">
+    <select id="findAll" resultType="kim.zhyn.mybatis.dto.TestDto">
+        select * from tb_test
+    </select>
+
+    <select id="findByState" resultType="kim.zhyn.mybatis.dto.TestDto">
+        SELECT *
+        FROM TB_TEST
+        WHERE idx = #{idx}
+    </select>
+</mapper>
