@@ -6,9 +6,9 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class TestDto {
+public class UserDto {
 
     int idx;
-    String description;
+    String name;
 
 }
