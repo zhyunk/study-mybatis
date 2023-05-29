@@ -2,10 +2,10 @@ package kim.zhyn.mybatis.dto;
 
 
 import lombok.*;
-import org.springframework.stereotype.Component;
 
-@Data
-@Component
+@Getter
+@Setter
+@ToString
 public class TestDto {
 
     int idx;

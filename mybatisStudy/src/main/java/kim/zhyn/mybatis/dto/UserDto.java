@@ -1,11 +1,13 @@
 package kim.zhyn.mybatis.dto;
 
 
-import lombok.Data;
-import org.springframework.stereotype.Component;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-@Data
-@Component
+@Getter
+@Setter
+@ToString
 public class UserDto {
 
     int idx;
@@ -13,4 +15,5 @@ public class UserDto {
 
     // xml mapper에서 사용
     private TestDto testDto;
+
 }

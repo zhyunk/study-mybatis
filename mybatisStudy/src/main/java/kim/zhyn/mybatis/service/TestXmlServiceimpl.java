@@ -30,12 +30,18 @@ public class TestXmlServiceimpl implements TestService<UserDto> {
 
     @Override
     public UserDto findByJoinId(int idx) throws Exception {
-//        if (idx > testMapper.findAll().size() || idx < 0)
-//            return UserDto
-//                    .builder()
-//                    .idx(0)
-//                    .name("❌")
-//                    .build();
+        if (idx > testMapper.findAll().size() || idx < 0) {
+            TestDto testDto = new TestDto();
+            testDto.setIdx(0);
+            testDto.setDescription("없는 번호 ❌");
+
+            UserDto userDto = new UserDto();
+            userDto.setIdx(0);
+            userDto.setName("");
+            userDto.setTestDto(testDto);
+
+            return userDto;
+        }
         return testMapper.findByJoinId(idx);
     }
 
